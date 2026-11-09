@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academia Dev: cursos de programação. Atividade com Bootstrap 5.">
+  <title>Academia Dev | Bootstrap</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <a href="#conteudo" class="visually-hidden-focusable btn btn-primary position-absolute m-2">Pular para o conteúdo</a>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <span class="logo-marca">&lt;/&gt;</span> Academia Dev
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#destaques">Destaques</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#turmas">Turmas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <section id="destaques" aria-label="Destaques">
+      <div id="carrosselDestaques" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img src="img/slide1.svg" class="d-block w-100 carrossel-img" alt="">
+            <div class="carousel-caption">
+              <h2 class="fw-bold">Trilha Front-end</h2>
+              <p>Aprenda React, CSS moderno e acessibilidade do zero.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="img/slide2.svg" class="d-block w-100 carrossel-img" alt="">
+            <div class="carousel-caption">
+              <h2 class="fw-bold">Trilha Back-end</h2>
+              <p>Construa APIs REST com Java, Spring Boot e Node.js.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="img/slide3.svg" class="d-block w-100 carrossel-img" alt="">
+            <div class="carousel-caption">
+              <h2 class="fw-bold">Trilha de Dados</h2>
+              <p>Domine SQL, Python e Power BI com projetos reais.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrosselDestaques" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrosselDestaques" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="cursos" class="py-5" aria-labelledby="titulo-cursos">
+      <div class="container">
+        <h2 id="titulo-cursos" class="fw-bold mb-1">Cursos em destaque</h2>
+        <p class="text-body-secondary mb-4">Escolha um curso e veja os detalhes.</p>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+          <div class="col">
+            <article class="card h-100 shadow-sm">
+              <img src="img/curso1.svg" class="card-img-top" alt="">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-primary align-self-start mb-2">Front-end</span>
+                <h3 class="card-title h5">Fundamentos de React</h3>
+                <p class="card-text text-body-secondary">Componentes, props, state e hooks para criar interfaces modernas.</p>
+                <button type="button" class="btn btn-outline-primary mt-auto"
+                        data-bs-toggle="modal" data-bs-target="#modalCurso"
+                        data-curso="Fundamentos de React" data-horas="20" data-nivel="Iniciante">
+                  Ver detalhes
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100 shadow-sm">
+              <img src="img/curso2.svg" class="card-img-top" alt="">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-success align-self-start mb-2">Back-end</span>
+                <h3 class="card-title h5">APIs REST com Spring Boot</h3>
+                <p class="card-text text-body-secondary">Crie APIs com Java, banco de dados e boas práticas de arquitetura.</p>
+                <button type="button" class="btn btn-outline-primary mt-auto"
+                        data-bs-toggle="modal" data-bs-target="#modalCurso"
+                        data-curso="APIs REST com Spring Boot" data-horas="32" data-nivel="Intermediário">
+                  Ver detalhes
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100 shadow-sm">
+              <img src="img/curso3.svg" class="card-img-top" alt="">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-warning align-self-start mb-2">Dados</span>
+                <h3 class="card-title h5">SQL do Zero</h3>
+                <p class="card-text text-body-secondary">Consultas, junções e modelagem de banco de dados relacional.</p>
+                <button type="button" class="btn btn-outline-primary mt-auto"
+                        data-bs-toggle="modal" data-bs-target="#modalCurso"
+                        data-curso="SQL do Zero" data-horas="18" data-nivel="Iniciante">
+                  Ver detalhes
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100 shadow-sm">
+              <img src="img/curso4.svg" class="card-img-top" alt="">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-primary align-self-start mb-2">Front-end</span>
+                <h3 class="card-title h5">CSS Moderno e Flexbox</h3>
+                <p class="card-text text-body-secondary">Layouts responsivos com Flexbox, Grid e media queries.</p>
+                <button type="button" class="btn btn-outline-primary mt-auto"
+                        data-bs-toggle="modal" data-bs-target="#modalCurso"
+                        data-curso="CSS Moderno e Flexbox" data-horas="12" data-nivel="Iniciante">
+                  Ver detalhes
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100 shadow-sm">
+              <img src="img/curso5.svg" class="card-img-top" alt="">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-success align-self-start mb-2">Back-end</span>
+                <h3 class="card-title h5">Docker na Prática</h3>
+                <p class="card-text text-body-secondary">Containers, imagens e deploy de aplicações de forma simples.</p>
+                <button type="button" class="btn btn-outline-primary mt-auto"
+                        data-bs-toggle="modal" data-bs-target="#modalCurso"
+                        data-curso="Docker na Prática" data-horas="16" data-nivel="Intermediário">
+                  Ver detalhes
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card h-100 shadow-sm">
+              <img src="img/curso6.svg" class="card-img-top" alt="">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-warning align-self-start mb-2">Dados</span>
+                <h3 class="card-title h5">Python para Análise de Dados</h3>
+                <p class="card-text text-body-secondary">Pandas, gráficos e limpeza de dados com projetos práticos.</p>
+                <button type="button" class="btn btn-outline-primary mt-auto"
+                        data-bs-toggle="modal" data-bs-target="#modalCurso"
+                        data-curso="Python para Análise de Dados" data-horas="28" data-nivel="Intermediário">
+                  Ver detalhes
+                </button>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="turmas" class="py-5 bg-body-tertiary" aria-labelledby="titulo-turmas">
+      <div class="container">
+        <h2 id="titulo-turmas" class="fw-bold mb-1">Próximas turmas</h2>
+        <p class="text-body-secondary mb-4">Datas de início e vagas disponíveis.</p>
+
+        <div class="table-responsive">
+          <table class="table table-striped table-hover align-middle bg-white shadow-sm">
+            <caption>Turmas abertas para matrícula no próximo semestre</caption>
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">Curso</th>
+                <th scope="col">Início</th>
+                <th scope="col">Turno</th>
+                <th scope="col">Carga horária</th>
+                <th scope="col">Vagas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Fundamentos de React</td><td>02/02/2027</td><td>Noite</td><td>20h</td><td><span class="badge text-bg-success">12</span></td></tr>
+              <tr><td>APIs REST com Spring Boot</td><td>09/02/2027</td><td>Noite</td><td>32h</td><td><span class="badge text-bg-warning">4</span></td></tr>
+              <tr><td>SQL do Zero</td><td>16/02/2027</td><td>Manhã</td><td>18h</td><td><span class="badge text-bg-success">20</span></td></tr>
+              <tr><td>CSS Moderno e Flexbox</td><td>23/02/2027</td><td>Tarde</td><td>12h</td><td><span class="badge text-bg-success">15</span></td></tr>
+              <tr><td>Docker na Prática</td><td>02/03/2027</td><td>Noite</td><td>16h</td><td><span class="badge text-bg-danger">Esgotado</span></td></tr>
+              <tr><td>Python para Análise de Dados</td><td>09/03/2027</td><td>Sábado</td><td>28h</td><td><span class="badge text-bg-warning">6</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="py-5" aria-labelledby="titulo-contato">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 id="titulo-contato" class="fw-bold mb-1">Fale com a gente</h2>
+            <p class="text-body-secondary mb-4">Tire dúvidas ou peça informações sobre matrícula.</p>
+
+            <form id="formContato" class="needs-validation card card-body shadow-sm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nome" class="form-label">Nome completo</label>
+                  <input type="text" class="form-control" id="nome" name="nome" required minlength="3" autocomplete="name">
+                  <div class="invalid-feedback">Informe seu nome (mínimo de 3 letras).</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="email" name="email" required autocomplete="email">
+                  <div class="invalid-feedback">Informe um e-mail válido.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="telefone" class="form-label">Telefone <span class="text-body-secondary">(opcional)</span></label>
+                  <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(71) 99999-9999" autocomplete="tel">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="interesse" class="form-label">Área de interesse</label>
+                  <select class="form-select" id="interesse" name="interesse" required>
+                    <option value="" selected disabled>Selecione...</option>
+                    <option>Front-end</option>
+                    <option>Back-end</option>
+                    <option>Dados</option>
+                  </select>
+                  <div class="invalid-feedback">Escolha uma área.</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="mensagem" class="form-label">Mensagem</label>
+                  <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required minlength="10"></textarea>
+                  <div class="invalid-feedback">Escreva uma mensagem com pelo menos 10 caracteres.</div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="termos" required>
+                    <label class="form-check-label" for="termos">Aceito receber contato da Academia Dev</label>
+                    <div class="invalid-feedback">É preciso aceitar para enviar.</div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary w-100 w-md-auto px-4">Enviar mensagem</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-dark text-white-50 py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <p class="mb-0">&copy; 2026 Academia Dev. Projeto acadêmico fictício.</p>
+      <p class="mb-0">Feito com Bootstrap 5</p>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="modalCurso" tabindex="-1" aria-labelledby="modalCursoTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="modalCursoTitulo">Curso</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curso com aulas gravadas, exercícios e projeto final.</p>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between">Carga horária <strong id="modalCursoHoras"></strong></li>
+            <li class="list-group-item d-flex justify-content-between">Nível <strong id="modalCursoNivel"></strong></li>
+            <li class="list-group-item d-flex justify-content-between">Certificado <strong>Sim</strong></li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <a href="#contato" class="btn btn-primary" id="botaoInscrever">Quero me inscrever</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalConfirmacao" tabindex="-1" aria-labelledby="modalConfirmacaoTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="modalConfirmacaoTitulo">Mensagem enviada!</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0">Obrigado, <strong id="nomeConfirmacao"></strong>. Responderemos no seu e-mail em até 2 dias úteis.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok, entendi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

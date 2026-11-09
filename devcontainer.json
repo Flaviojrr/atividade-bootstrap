@@ -1,0 +1,13 @@
+{
+  "name": "Atividade Bootstrap e Tailwind",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": { "label": "Página", "onAutoForward": "openBrowser" }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["MS-CEINTL.vscode-language-pack-pt-BR"]
+    }
+  }
+}

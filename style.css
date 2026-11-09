@@ -1,0 +1,32 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+.logo-marca {
+  background: #fff;
+  color: var(--bs-primary);
+  border-radius: 6px;
+  padding: 0 6px;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.carrossel-img {
+  height: 260px;
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  .carrossel-img { height: 380px; }
+}
+@media (min-width: 992px) {
+  .carrossel-img { height: 450px; }
+}
+
+.carousel-caption {
+  bottom: 25%;
+}
+
+@media (min-width: 768px) {
+  .w-md-auto { width: auto !important; }
+}
